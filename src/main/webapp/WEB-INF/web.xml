@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>JSTL3</servlet-name>
+        <servlet-class>ch9.jstl.servlets.JSTL3</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>ch9.jstl.servlets.Register</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JSTL3</servlet-name>
+        <url-pattern>/JSTL3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>1</session-timeout>
+    </session-config>
+
+    <error-page>
+        <exception-type>java.lang.ArithmeticException</exception-type>
+        <location>/errorPages/arithmeticError.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errorPages/notFoundError.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/errorPages/errorPage.jsp</location>
+    </error-page>
+    <welcome-file-list>
+        <welcome-file>jstl1.jsp</welcome-file>
+        <welcome-file>errorPage.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
