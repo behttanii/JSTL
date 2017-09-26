@@ -5,7 +5,7 @@
 <%@include file="/header.jsp" %>
 <div class="container">
 
-    <h1>WARNING: ERROR:arit ${pageContext.exception} </h1>
+    <h1>WARNING: ERROR: ${pageContext.exception} </h1>
 
 </div>
 </body>
